@@ -31,6 +31,15 @@
       border-radius: 100px; 
       max-height:100%;
     }
+    .span-no {
+      font-family: monospace;
+      font-size: 34px;
+      font-weight: bold;
+      color: #3f51b5; 
+    }
+    .txt-center {
+      text-align: center;
+    }
   </style>
 
 </head>
@@ -60,7 +69,7 @@
       </div>
       <md-list>
         <md-list-item ng-repeat="itm in vm.sideMenuItem track by itm.id">
-          <md-button flex="100" class="md-raised" ui-sref="{{itm.state}}">
+          <md-button flex="100" class="md-accent" ui-sref="{{itm.state}}">
             {{itm.name}}
           </md-button>
         </md-list-item>

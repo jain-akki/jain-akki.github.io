@@ -33,8 +33,8 @@
       .icon("menu", "./img/svg/menu.svg", 24);
 
     $mdThemingProvider.theme('default')
-      .primaryPalette('grey')
-      .accentPalette('red');
+      .primaryPalette('indigo')
+      .accentPalette('deep-purple');
 
   });
 })();

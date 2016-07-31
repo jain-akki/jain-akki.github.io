@@ -3,19 +3,32 @@
   <div flex-gt-xs="70" layout="column" flex>
     <md-card>
       <!--<img ng-src="{{allInfo.avatar_url}}" class="md-avatar" alt="Akshay Profile Pic">-->
+      <md-toolbar class="md-theme-light">
+        <h2  class="md-toolbar-tools">
+          <span>Github Portfolio</span>
+        </h2>
+      </md-toolbar>
       <md-card-title>
         <md-card-title-text>
           <span class="md-headline">{{allInfo.name}}</span>
         </md-card-title-text>
       </md-card-title>
       <md-card-content>
-        <p>
-          {{allInfo.login}}
-        </p>
+        <p>{{allInfo.login}}</p>
+        <hr/>
         <p>{{allInfo.company}}</p>
         <p>{{allInfo.location}}</p>
         <p>{{allInfo.email}}</p>
         <p>Joined on {{allInfo.created_at | date: 'medium'}}</p>
+        <hr/>
+        <div layout="row" layout-align="center">
+          <div flex="30" class="txt-center">
+            <span class="span-no">{{allInfo.followers}}</span><br />Followers
+          </div>
+          <div flex="30" class="txt-center">
+            <span class="span-no">{{allInfo.public_repos}}</span><br />Repositories
+          </div>
+        </div>
       </md-card-content>
     </md-card>
   </div>
