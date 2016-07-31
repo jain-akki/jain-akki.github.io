@@ -1,12 +1,12 @@
 ﻿<div layout="row">
-  <div flex-offset-gt-xs="15" layout="column"></div>
-  <div flex-gt-xs="70" layout="column" flex>
+  <div flex-offset-gt-xs="5" layout="column"></div>
+  <div flex-gt-xs="90" layout="column" flex>
     <md-card>
       <!--<img ng-src="{{allInfo.avatar_url}}" class="md-avatar" alt="Akshay Profile Pic">-->
-      <md-toolbar class="md-theme-light">
-        <h2  class="md-toolbar-tools">
-          <span>Github Portfolio</span>
-        </h2>
+      <md-toolbar layout="row">
+        <md-icon flex="5" class="git-icon" md-svg-icon="github"></md-icon>
+        <h2 flex="70" flex-xs="60" class="md-toolbar-tools">Github Portfolio</h2>
+        <md-button flex class="md-primary md-raised" href="{{allInfo.html_url}}" style="text-transform:capitalize">Follow Me</md-button>
       </md-toolbar>
       <md-card-title>
         <md-card-title-text>

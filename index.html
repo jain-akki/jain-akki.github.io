@@ -40,13 +40,16 @@
     .txt-center {
       text-align: center;
     }
+    .git-icon {
+      margin-left: 7px;
+    }
   </style>
 
 </head>
 <body layout="column" ng-cloak ng-controller="mainCtrl as vm">
 
-  <md-toolbar layout="row">
-    <md-button class="menu" hide-gt-sm ng-click="vm.toggle()" aria-label="Show Menu">
+  <md-toolbar layout>
+    <md-button class="md-icon-button" hide-gt-sm ng-click="vm.toggle()" aria-label="Show Menu" style="margin-top:7px;">
       <md-icon md-svg-icon="menu"></md-icon>
     </md-button>
     <div class="md-toolbar-tools">

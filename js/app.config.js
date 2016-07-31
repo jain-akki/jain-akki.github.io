@@ -39,7 +39,8 @@
       .icon("account", "./img/svg/account.svg", 12)
       .icon("clock", "./img/svg/clock.svg", 24)
       .icon("email", "./img/svg/email.svg", 24)
-      .icon("home", "./img/svg/home-map-marker.svg", 24);
+      .icon("home", "./img/svg/home-map-marker.svg", 24)
+      .icon("github", "./img/svg/github-circle.svg", 24);
 
     $mdThemingProvider.theme('default')
       .primaryPalette('indigo')
