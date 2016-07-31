@@ -16,10 +16,18 @@
       <md-card-content>
         <p>{{allInfo.login}}</p>
         <hr/>
-        <p>{{allInfo.company}}</p>
-        <p>{{allInfo.location}}</p>
-        <p>{{allInfo.email}}</p>
-        <p>Joined on {{allInfo.created_at | date: 'medium'}}</p>
+        <div>
+          <md-icon md-svg-icon="account"></md-icon> <span>{{allInfo.company}}</span>
+        </div>
+        <div>
+          <md-icon md-svg-icon="home"></md-icon> <span>{{allInfo.location}}</span>
+        </div>
+        <div>
+          <md-icon md-svg-icon="email"></md-icon> <span>{{allInfo.email}}</span>
+        </div>
+        <div>
+          <md-icon md-svg-icon="clock"></md-icon> <span>Joined on {{allInfo.created_at | date: 'medium'}}</span>
+        </div>
         <hr/>
         <div layout="row" layout-align="center">
           <div flex="30" class="txt-center">

@@ -11,7 +11,9 @@
 
        vm.sideMenuItem = [
          { id: 1, name: 'Github Portfolio', state: 'gitProfile' },
-         {id: 2, name: 'About Me',  state: 'aboutMe'}
+         { id: 2, name: 'Professional Portfolio', state: 'professionalPortfolio' },
+         { id: 3, name: 'About Me', state: 'aboutMe' }
+
        ];
 
        userData.getUserInfo('jain-akki').then(function (response) {
@@ -25,11 +27,18 @@
        }
 
      })
-    .controller('githubDetailsCtrl', function (userData) {
+    .controller('githubDetailsCtrl', function () {
 
       var vm = this;
 
       console.log('githubProfileCtrl'); 
+
+    })
+    .controller('professionalPortfolioCtrl', function () {
+
+      var vm = this;
+
+      console.log('professionalPortfolioCtrl');
 
     })
     .controller('aboutCtrl', function () {
