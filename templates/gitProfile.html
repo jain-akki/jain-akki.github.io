@@ -1,0 +1,23 @@
+﻿<div layout="row">
+  <div flex-offset-gt-xs="15" layout="column"></div>
+  <div flex-gt-xs="70" layout="column" flex>
+    <md-card>
+      <!--<img ng-src="{{allInfo.avatar_url}}" class="md-avatar" alt="Akshay Profile Pic">-->
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">{{allInfo.name}}</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content>
+        <p>
+          {{allInfo.login}}
+        </p>
+        <p>{{allInfo.company}}</p>
+        <p>{{allInfo.location}}</p>
+        <p>{{allInfo.email}}</p>
+        <p>Joined on {{allInfo.created_at | date: 'medium'}}</p>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>
+

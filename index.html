@@ -17,37 +17,57 @@
   <script src="js/app.config.js"></script>
   <script src="js/factory/userData.js"></script>
   <script src="js/controllers/controllers.js"></script>
+
+  <style type="text/css">
+    [ng-cloak] {
+      display: none !important;
+    }
+    .md-avatar {
+      max-width: 100%;
+      max-height:100%;
+      border-radius: 100px; 
+    }
+    .md-whiteframe-8dp {
+      border-radius: 100px; 
+      max-height:100%;
+    }
+  </style>
+
 </head>
-<body layout="column">
+<body layout="column" ng-cloak ng-controller="mainCtrl as vm">
 
   <md-toolbar class="md-teal" layout="row">
-    <md-button class="menu" aria-label="Show Menu"></md-button>
+    <md-button class="menu" hide-gt-sm ng-click="vm.toggle()" aria-label="Show Menu">
+      <md-icon md-svg-icon="menu"></md-icon>
+    </md-button>
     <div class="md-toolbar-tools">
-      <h2 class="md-flex">Akshay Jain</h2>
+      <h2 class="md-flex">{{allInfo.name}}</h2>
     </div>
   </md-toolbar>
 
   <div flex layout="row">
-    <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" 
-                md-component-id="left" 
+    <md-sidenav md-is-locked-open="$mdMedia('gt-sm')"
+                md-component-id="left"
                 ng-click="vm.toggle()"
-                md-disable-backdrop 
                 class="md-whiteframe-z2">
+      <md-toolbar hide-gt-sm>
+        <h1 class="md-toolbar-tools">{{allInfo.name}}</h1>
+      </md-toolbar>
+      <div layout="row" layout-align="center center">
+        <md-whiteframe class="md-whiteframe-8dp" flex="50">
+          <img ng-src="{{allInfo.avatar_url}}" class="md-avatar" alt="Akshay Profile Pic">
+        </md-whiteframe>
+      </div>
       <md-list>
-        <md-list-item>
-          <md-button>
-            <!--<md-icon></md-icon>--> Github Profile
-          </md-button>
-        </md-list-item>
-        <md-list-item>
-          <md-button>
-            <!--<md-icon></md-icon>--> About Me
+        <md-list-item ng-repeat="itm in vm.sideMenuItem track by itm.id">
+          <md-button flex="100" class="md-raised" ui-sref="{{itm.state}}">
+            {{itm.name}}
           </md-button>
         </md-list-item>
       </md-list>
     </md-sidenav>
-    <md-content flex id="content" ui-view>  
+    <md-content flex id="content" ui-view>
     </md-content>
-</div>
+  </div>
 </body>
 </html>
