@@ -26,8 +26,27 @@
         return deferred.promise;
       }
 
+      var getRepos = function (username) {
+
+        var deferred = $q.defer();
+
+        $http({
+          method: 'GET',
+          contentType: 'application/json',
+          url: baseUrl + username + '/repos'
+        })
+        .success(function (response) {
+          deferred.resolve(response);
+        }).error(function (response) {
+          deferred.reject(response);
+        });
+
+        return deferred.promise;
+      }
+
       return {
-        getUserInfo: getUserInfo
+        getUserInfo: getUserInfo,
+        getRepos: getRepos
       }
 
     })
