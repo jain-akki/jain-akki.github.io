@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="githubPortfolio">
 <head>
-  
+
   <title>Akshay Jain - Github Portfolio</title>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
   <!--Online Styles-->
@@ -10,15 +10,15 @@
   <script src="/node_modules/angular/angular.js"></script>
   <script src="/node_modules/angular-aria/angular-aria.min.js"></script>
   <script src="/node_modules/angular-animate/angular-animate.min.js"></script>
-  <script src="/node_modules/angular-material/angular-material.min.js"></script> 
-  <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script> 
+  <script src="/node_modules/angular-material/angular-material.min.js"></script>
+  <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
   <!--Custom Scripts-->
   <script src="js/app.js"></script>
   <script src="js/app.config.js"></script>
   <script src="js/factory/userData.js"></script>
   <script src="js/controllers/controllers.js"></script>
 </head>
-<body ng-app="githubPortfolio" layout="column">
+<body layout="column">
 
   <md-toolbar class="md-teal" layout="row">
     <md-button class="menu" aria-label="Show Menu"></md-button>
@@ -28,7 +28,11 @@
   </md-toolbar>
 
   <div flex layout="row">
-    <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" ng-click="vm.toggle()" class="md-whiteframe-z2">
+    <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" 
+                md-component-id="left" 
+                ng-click="vm.toggle()"
+                md-disable-backdrop 
+                class="md-whiteframe-z2">
       <md-list>
         <md-list-item>
           <md-button>
@@ -42,25 +46,7 @@
         </md-list-item>
       </md-list>
     </md-sidenav>
-    <md-content flex id="content" ng-controller="githubDetailsCtrl as vm">
-      <div layout="row">
-        <div flex-offset-gt-xs="35" layout="column"></div>
-        <div flex-gt-xs="30" layout="column">
-          <md-card>
-            <img ng-src="{{vm.allInfo.avatar_url}}" class="md-card-image" alt="Washed Out">
-            <md-card-title>
-              <md-card-title-text>
-                <span class="md-headline">{{vm.allInfo.name}}</span>
-              </md-card-title-text>
-            </md-card-title>
-            <md-card-content>
-              <p>
-                {{vm.allInfo.login}}
-              </p>
-            </md-card-content>
-          </md-card>
-        </div>
-      </div>
+    <md-content flex id="content" ui-view>  
     </md-content>
 </div>
 </body>

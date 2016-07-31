@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('githubPortfolio', ['ngMaterial', 'githubPortfolio.factories'])
+  angular.module('githubPortfolio')
 
      .controller('mainCtrl', function () {
        var vm = this;

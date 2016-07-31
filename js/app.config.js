@@ -2,22 +2,22 @@
 
   'use strict';
 
-  angular.module('githubPortfolio', ['ngMaterial', 'ui.router'])
+  angular.module('githubPortfolio')
 
   .config(function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider
      .state('main', {
-       url: '/main',
+       url: '/',
        abstract: true, 
        templateUrl: 'index.html',
        controller: 'mainCtrl as vm'
      })
-    .state('main.gitProfile', {
+    .state('gitProfile', {
       url: '/gitProfile',
       templateUrl: 'templates/mainContent.html',
-      controller: 'githubProfileCtrl as vm'
+      controller: 'githubDetailsCtrl as vm'
     });
-    $urlRouterProvider.otherwise('/main/gitProfile');
+    $urlRouterProvider.otherwise('/gitProfile');
   });
 })();

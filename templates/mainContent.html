@@ -1,0 +1,19 @@
+﻿<div layout="row">
+  <div flex-offset-gt-xs="35" layout="column"></div>
+  <div flex-gt-xs="30" layout="column">
+    <md-card>
+      <img ng-src="{{vm.allInfo.avatar_url}}" class="md-card-image" alt="Washed Out">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">{{vm.allInfo.name}}</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content>
+        <p>
+          {{vm.allInfo.login}}
+        </p>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>
+
