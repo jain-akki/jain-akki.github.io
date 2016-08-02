@@ -49,10 +49,10 @@
 <body layout="column" ng-cloak ng-controller="mainCtrl as vm">
 
   <md-toolbar layout>
-    <md-button class="md-icon-button" hide-gt-sm ng-click="vm.toggle()" aria-label="Show Menu" style="margin-top:7px;">
-      <md-icon md-svg-icon="menu"></md-icon>
-    </md-button>
     <div class="md-toolbar-tools">
+      <md-button class="md-icon-button" hide-gt-sm ng-click="vm.toggle()" aria-label="Show Menu">
+        <md-icon md-svg-icon="menu"></md-icon>
+      </md-button>
       <h2 class="md-flex">{{allInfo.name}}</h2>
     </div>
   </md-toolbar>
@@ -65,8 +65,8 @@
       <md-toolbar hide-gt-sm>
         <h1 class="md-toolbar-tools">{{allInfo.name}}</h1>
       </md-toolbar>
-      <div layout="row" layout-align="center center">
-        <md-whiteframe class="md-whiteframe-8dp" flex="50">
+      <div class="md-padding" layout="row" layout-align="center center">
+        <md-whiteframe class="md-whiteframe" flex="50">
           <img ng-src="{{allInfo.avatar_url}}" class="md-avatar" alt="Akshay Profile Pic">
         </md-whiteframe>
       </div>
