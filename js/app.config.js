@@ -43,7 +43,8 @@
       .icon("github", "./img/svg/github-circle.svg", 24)
       .icon("close", "./img/svg/close.svg", 24)
       .icon("label", "./img/svg/label.svg", 24)
-      .icon("account-circle", "./img/svg/account-circle.svg", 24);
+      .icon("account-circle", "./img/svg/account-circle.svg", 24)
+      .icon("logo", "./img/svg/logo.svg", 30);
 
     $mdThemingProvider.theme('default')
       .primaryPalette('teal')

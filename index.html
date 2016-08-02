@@ -53,6 +53,9 @@
       <md-button class="md-icon-button" hide-gt-sm ng-click="vm.toggle()" aria-label="Show Menu">
         <md-icon md-svg-icon="menu"></md-icon>
       </md-button>
+      <md-button class="md-icon-button md-raised md-accent md-hue-3" hide-xs hide-sm>
+        <md-icon md-svg-icon="logo"></md-icon>
+      </md-button>
       <h2 class="md-flex">{{allInfo.name}}</h2>
     </div>
   </md-toolbar>
@@ -63,7 +66,12 @@
                 ng-click="vm.toggle()"
                 class="md-whiteframe-z2">
       <md-toolbar hide-gt-sm>
-        <h1 class="md-toolbar-tools">{{allInfo.name}}</h1>
+        <div class="md-toolbar-tools">
+          <md-button class="md-icon-button md-raised md-accent md-hue-3">
+            <md-icon md-svg-icon="logo"></md-icon>
+          </md-button>
+          <h1>{{allInfo.name}}</h1>
+        </div>        
       </md-toolbar>
       <div class="md-padding" layout="row" layout-align="center center">
         <md-whiteframe class="md-whiteframe" flex="50">
@@ -72,7 +80,7 @@
       </div>
       <md-list>
         <md-list-item ng-repeat="itm in vm.sideMenuItem track by itm.id">
-          <md-button flex="100" class="md-accent" ui-sref="{{itm.state}}">
+          <md-button flex="100" class="md-accent md-hue-3" ui-sref="{{itm.state}}">
             {{itm.name}}
           </md-button>
         </md-list-item>
