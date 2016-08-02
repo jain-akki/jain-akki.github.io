@@ -2,12 +2,16 @@
   <div flex-offset-gt-xs="5" layout="column"></div>
   <div flex-gt-xs="90" layout="column" flex>
     <md-card>
-      <!--<img ng-src="{{allInfo.avatar_url}}" class="md-avatar" alt="Akshay Profile Pic">-->
       <md-toolbar layout="row">
-        <md-button class="md-icon-button" href="{{allInfo.html_url}}" style="margin-top:7px;">
-          <md-icon md-svg-icon="github"></md-icon>
-        </md-button>
-        <p flex class="md-toolbar-tools" style="padding:0px;">Github Portfolio</p>
+        <div class="md-toolbar-tools">
+          <md-button class="md-icon-button" 
+                     href="{{allInfo.html_url}}"
+                     title="View Github Account" 
+                     target="_blank">
+            <md-icon md-svg-icon="github"></md-icon>
+          </md-button>
+          <p>Github Portfolio</p>
+        </div>
       </md-toolbar>
       <md-card-title>
         <md-card-title-text>
