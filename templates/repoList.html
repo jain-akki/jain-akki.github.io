@@ -1,14 +1,19 @@
 ﻿<md-dialog flex="60" flex-xs="90" aria-label="Repo Dialog">
   <md-toolbar layout="row">
-    <h2 class="md-toolbar-tools">Repositories List</h2>
-    <span flex></span>
-    <md-button class="md-icon-button" ng-click="closeRepoDialog()" aria-label="Close Repo Dialog" style="margin-top:10px;">
-      <md-icon md-svg-icon="close"></md-icon>
-    </md-button>
+    <div class="md-toolbar-tools">
+      <h2>Repositories List</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="closeRepoDialog()" aria-label="Close Repo Dialog">
+        <md-icon md-svg-icon="close"></md-icon>
+      </md-button>
+    </div>
   </md-toolbar>
   <md-dialog-content class="md-padding" style="max-height:400px;">
     <md-list flex>
-      <md-list-item class="md-3-line" ng-repeat="repo in repos track by repo.id" href="{{repo.svn_url}}">
+      <md-list-item class="md-3-line" 
+                    ng-repeat="repo in repos track by repo.id" 
+                    href="{{repo.svn_url}}"
+                    target="_blank">
         <div class="md-list-item-text" layout="column">
           <h3 flex="50">{{repo.name}}</h3>
           <p>{{repo.description}}<span ng-if="repo.description === null">No Description</span></p>
