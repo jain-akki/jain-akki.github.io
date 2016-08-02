@@ -42,11 +42,12 @@
       .icon("home", "./img/svg/home-map-marker.svg", 24)
       .icon("github", "./img/svg/github-circle.svg", 24)
       .icon("close", "./img/svg/close.svg", 24)
-      .icon("label", "./img/svg/label.svg", 24);
+      .icon("label", "./img/svg/label.svg", 24)
+      .icon("account-circle", "./img/svg/account-circle.svg", 24);
 
     $mdThemingProvider.theme('default')
-      .primaryPalette('indigo')
-      .accentPalette('deep-purple');
+      .primaryPalette('teal')
+      .accentPalette('brown');
 
   });
 })();
