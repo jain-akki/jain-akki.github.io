@@ -4,7 +4,7 @@
 
   angular.module('githubPortfolio')
 
-     .controller('mainCtrl', function ($mdSidenav, userData, $rootScope) {
+    .controller('mainCtrl', function ($mdSidenav, githubDataService, $rootScope) {
        var vm = this;
 
        console.log('mainContent');
@@ -15,7 +15,7 @@
          { id: 3, name: 'About Me', state: 'aboutMe' }
        ];
 
-       userData.getUserInfo('jain-akki').then(function (response) {
+       githubDataService.getUserInfo('jain-akki').then(function (response) {
          $rootScope.allInfo = response;
          console.log('allInfo', $rootScope.allInfo);
        });
@@ -47,13 +47,13 @@
       }
 
     })
-    .controller('repoListCtrl', function ($scope, userData, $mdDialog) {
+    .controller('repoListCtrl', function ($scope, githubDataService, $mdDialog) {
 
       var vm = this;
 
       console.log('repoListCtrl');
 
-      userData.getRepos('jain-akki').then(function (response) {
+      githubDataService.getRepos('jain-akki').then(function (response) {
         $scope.repos = response;
         console.log('$scope.repos: ', $scope.repos);
       });
@@ -63,11 +63,25 @@
       }
 
     })
-    .controller('professionalPortfolioCtrl', function () {
+    .controller('professionalPortfolioCtrl', function (personalDataService) {
 
       var vm = this;
 
+      vm.labels = [];
+
+      vm.data = [];
+
       console.log('professionalPortfolioCtrl');
+
+      personalDataService.getUserInfo().then(function (response) {
+        vm.fbData = response;
+        console.log('vm.fbData: ', vm.fbData.content.language_rating[0].name);
+        angular.forEach(vm.fbData.content.language_rating, function (val, index) {
+          vm.labels.push(val.name);
+          vm.data.push(val.rating); 
+        });
+        vm.data.push(0);
+      })
 
     })
     .controller('aboutCtrl', function () {

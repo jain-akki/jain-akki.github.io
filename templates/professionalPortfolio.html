@@ -7,11 +7,15 @@
           <md-button class="md-icon-button">
             <md-icon md-svg-icon="account-circle"></md-icon>
           </md-button>
-          <h1>Professional Portfolio</h1>
+          <h1>{{vm.fbData.title}}</h1>
         </div>
       </md-toolbar>
       <md-card-content>
-        Here Comes the Content Professional Portfolio.
+        <code>Web Technologies Rating Chart</code>
+        <canvas id="base" class="chart chart-horizontal-bar"
+                chart-data="vm.data" 
+                chart-options="vm.options"
+                chart-labels="vm.labels"></canvas>
       </md-card-content>
     </md-card>
   </div>

@@ -4,9 +4,9 @@
 
   angular.module('githubPortfolio.factories', [])
 
-    .value("baseUrl", "https://api.github.com/users/")
+    .constant("baseUrl", "https://api.github.com/users/")
 
-    .factory('userData', function (baseUrl, $http, $q) {
+    .factory('githubDataService', function (baseUrl, $http, $q) {
 
       var getUserInfo = function (username) {
 

@@ -1,0 +1,26 @@
+{
+	title: 'Professional Portfolio',
+	content: {
+		language_rating: [{
+			id: 1,
+			name: "Html",
+			rating: 70
+		}, {
+			id: 2,
+			name: "Css3",
+			rating: 85
+		}, {
+			id: 3,
+			name: "Javascript",
+			rating: 80
+		}, {
+			id: 4,
+			name: "AngularJs",
+			rating: 70
+		}, {
+			id: 5,
+			name: "Ionic",
+			rating: 75
+		}]
+	}
+}
