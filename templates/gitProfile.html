@@ -21,7 +21,7 @@
       </md-card-title>
       <md-card-content>
         <p>{{allInfo.bio}}</p>
-        <p>Last Updated: {{allInfo.updated_at | date: 'medium'}}</p>
+        <p>Last Updated: {{allInfo.updated_at | date: 'mediumDate'}}</p>
         <hr/>
         <div>
           <md-icon md-svg-icon="account"></md-icon> <span>{{allInfo.company}}</span>
@@ -33,7 +33,7 @@
           <md-icon md-svg-icon="email"></md-icon> <span>{{allInfo.email}}</span>
         </div>
         <div>
-          <md-icon md-svg-icon="clock"></md-icon> <span>Joined on {{allInfo.created_at | date: 'medium'}}</span>
+          <md-icon md-svg-icon="clock"></md-icon> <span>Joined on {{allInfo.created_at | date: 'mediumDate'}}</span>
         </div>
         <hr/>
         <div layout="row" layout-align="center">
