@@ -1,0 +1,36 @@
+{
+  "about_me" : {
+    "content" : "Hola Folk's, My name is Akshay Jain & I am in Fourth year of my B.Tech Degree Course. I am an Enthusiastic Frontend Developer not too proficient but try to improve my skills in every instance of my life & Always keen to learn more. I don't wanna be master or so called awesome coder, I just wanna code for fun or to amuse myself. I feel kind of relaxed when i am coding.  Apart from Coding I spend rest of my time in sleeping & I am kind of lazy human always yawning. My Companion sometimes call me Torpid.",
+    "title" : "About Me"
+  },
+  "professional_portfolio" : {
+    "content" : {
+      "language_rating" : [ {
+        "id" : 1,
+        "name" : "Html5",
+        "rating" : 70
+      }, {
+        "id" : 2,
+        "name" : "Css3",
+        "rating" : 85
+      }, {
+        "id" : 3,
+        "name" : "Javascript",
+        "rating" : 80
+      }, {
+        "id" : 4,
+        "name" : "AngularJs",
+        "rating" : 70
+      }, {
+        "id" : 5,
+        "name" : "Ionic ",
+        "rating" : 75
+      }, {
+        "id" : 6,
+        "name" : "MongoDb",
+        "rating" : 75
+      } ]
+    },
+    "title" : "Professional Portfolio"
+  }
+}
