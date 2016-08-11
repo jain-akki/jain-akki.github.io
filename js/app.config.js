@@ -16,17 +16,17 @@
     .state('gitProfile', {
       url: '/gitProfile',
       templateUrl: 'templates/gitProfile.html',
-      controller: 'githubDetailsCtrl as vm'
+      controller: 'githubProfileCtrl as vm'
     })
-    .state('professionalPortfolio', {
-      url: '/professionalPortfolio',
-      templateUrl: 'templates/professionalPortfolio.html',
-      controller: 'professionalPortfolioCtrl as vm'
+    .state('personalProfile', {
+      url: '/personalProfile',
+      templateUrl: 'templates/personalProfile.html',
+      controller: 'personalProfileCtrl as vm'
     })
     .state('aboutMe', {
       url: '/aboutMe',
       templateUrl: 'templates/aboutMe.html',
-      controller: 'aboutCtrl as vm'
+      controller: 'aboutMeCtrl as vm'
     });
 
     $urlRouterProvider.otherwise('/gitProfile');
@@ -47,7 +47,7 @@
       .icon("logo", "./img/svg/logo.svg", 30);
 
     $mdThemingProvider.theme('default')
-      .primaryPalette('teal')
+      .primaryPalette('indigo')
       .accentPalette('brown');
 
   });

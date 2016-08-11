@@ -2,8 +2,7 @@
 
   'use strict';
 
-  angular.module('githubPortfolio',
-    [
+  angular.module('githubPortfolio',[
       'ngMaterial',
       'githubPortfolio.factories',
       'ui.router',
