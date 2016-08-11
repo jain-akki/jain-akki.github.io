@@ -7,19 +7,11 @@
           <md-button class="md-icon-button">
             <md-icon md-svg-icon="label"></md-icon>
           </md-button>
-          <h1>About Me</h1>
+          <h1>{{vm.fbData.title}}</h1>
         </div>
       </md-toolbar>
       <md-card-content>
-        <p>
-          <!--&emsp;Hola Folk's, My name is <code style="font-size:large;">Akshay Jain</code> & I am in Fourth year of my B.Tech Degree Course.
-          I am an Enthusiastic Frontend Developer not too proficient but try to improve my skills in every instance of my life & Always keen to learn more.
-          I don't wanna be master or so called <q>awesome</q> coder, I just wanna code for fun or to amuse myself. I feel kind of relaxed when
-          i am coding.
-          <br/><br/>
-          Apart from Coding I spend rest of my time in sleeping & I am kind of lazy human always yawning. My Companion 
-          sometimes call me Torpid.-->  
-        </p>
+        <p ng-bind-html="vm.fbData.content"></p>
       </md-card-content>
     </md-card>
   </div>

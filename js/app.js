@@ -7,7 +7,8 @@
       'githubPortfolio.factories',
       'ui.router',
       'firebase',
-      'chart.js'
+      'chart.js',
+      'ngSanitize'
     ])
  
 })();

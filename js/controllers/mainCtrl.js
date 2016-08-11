@@ -6,8 +6,6 @@
     .controller('mainCtrl', function ($mdSidenav, githubDataService, $rootScope) {
        var vm = this;
 
-       console.log('mainContent');
-
        vm.sideMenuItem = [
          { id: 1, name: 'Github Portfolio', state: 'gitProfile' },
          { id: 2, name: 'Professional Portfolio', state: 'personalProfile' },

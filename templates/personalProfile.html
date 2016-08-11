@@ -11,11 +11,11 @@
         </div>
       </md-toolbar>
       <md-card-content>
-        <code>Web Technologies Rating Chart</code>
         <canvas id="base" class="chart chart-horizontal-bar"
                 chart-data="vm.data" 
                 chart-options="vm.options"
                 chart-labels="vm.labels"></canvas>
+        <div ng-bind-html="vm.fbData.content.chart_title" style="margin: 20px;text-align: center;font-size: 20px;"></div>
       </md-card-content>
     </md-card>
   </div>
