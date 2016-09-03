@@ -21,7 +21,14 @@
     .state('personalProfile', {
       url: '/personalProfile',
       templateUrl: 'templates/personalProfile.html',
-      controller: 'personalProfileCtrl as vm'
+      controller: 'personalProfileCtrl as vm',
+      resolve: {
+        fbData: function (personalDataService) {
+          return personalDataService.getUserInfo().then(function (response) {
+            return response;
+          })
+        }
+      }
     })
     .state('aboutMe', {
       url: '/aboutMe',
