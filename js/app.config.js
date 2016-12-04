@@ -54,8 +54,8 @@
       .icon("logo", "./img/svg/logo.svg", 30);
 
     $mdThemingProvider.theme('default')
-      .primaryPalette('amber')
-      .accentPalette('brown');
+      .primaryPalette('indigo')
+      .accentPalette('blue-grey');
 
   });
 })();
