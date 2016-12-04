@@ -14,6 +14,7 @@
         vm.labels.push(val.name);
         vm.data.push(val.rating);
       });
+      vm.labels.push(0);
       vm.data.push(0);
 
     });
